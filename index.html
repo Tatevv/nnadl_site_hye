@@ -11,12 +11,12 @@
     <meta name="citation_fulltext_html_url" content="http://neuralnetworksanddeeplearning.com">
     <meta name="citation_publisher" content="Determination Press">
     <link rel="icon" href="nnadl_favicon.ICO" />
-    <title>Neural networks and deep learning</title>
+    <title>Նեյրոնային ցանցեր և խորը ուսուցում</title>
     <script src="assets/jquery.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         tex2jax: {inlineMath: [['$','$']]},
-        "HTML-CSS": 
+        "HTML-CSS":
           {scale: 92},
         TeX: { equationNumbers: { autoNumber: "AMS" }}});
     </script>
@@ -52,67 +52,67 @@
 </style>
 
   </head>
-  <body><div class="nonumber_header"><h2><a href="index.html">Neural Networks and Deep Learning</a></h2></div><div class="section"><div id="toc"> 
-<p class="toc_title"><a href="index.html">Neural Networks and Deep Learning</a></p><p class="toc_not_mainchapter"><a href="about.html">What this book is about</a></p><p class="toc_not_mainchapter"><a href="exercises_and_problems.html">On the exercises and problems</a></p><p class='toc_mainchapter'><a id="toc_using_neural_nets_to_recognize_handwritten_digits_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_using_neural_nets_to_recognize_handwritten_digits" src="images/arrow.png" width="15px"></a><a href="chap1.html">Using neural nets to recognize handwritten digits</a><div id="toc_using_neural_nets_to_recognize_handwritten_digits" style="display: none;"><p class="toc_section"><ul><a href="chap1.html#perceptrons"><li>Perceptrons</li></a><a href="chap1.html#sigmoid_neurons"><li>Sigmoid neurons</li></a><a href="chap1.html#the_architecture_of_neural_networks"><li>The architecture of neural networks</li></a><a href="chap1.html#a_simple_network_to_classify_handwritten_digits"><li>A simple network to classify handwritten digits</li></a><a href="chap1.html#learning_with_gradient_descent"><li>Learning with gradient descent</li></a><a href="chap1.html#implementing_our_network_to_classify_digits"><li>Implementing our network to classify digits</li></a><a href="chap1.html#toward_deep_learning"><li>Toward deep learning</li></a></ul></p></div>
+  <body><div class="nonumber_header"><h2><a href="index.html">Նեյրոնային ցանցեր և խորը ուսուցում</a></h2></div><div class="section"><div id="toc">
+<p class="toc_title"><a href="index.html">Նեյրոնային ցանցեր և խորը ուսուցում</a></p><p class="toc_not_mainchapter"><a href="about.html">Ինչի՞ մասին է գիրքը</a></p><p class="toc_not_mainchapter"><a href="exercises_and_problems.html">Խնդիրների և վարժությունների մասին</a></p><p class='toc_mainchapter'><a id="toc_using_neural_nets_to_recognize_handwritten_digits_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_using_neural_nets_to_recognize_handwritten_digits" src="images/arrow.png" width="15px"></a><a href="chap1.html">Ձեռագիր թվերի ճանաչում օգտագործելով նեյրոնային ցանծեր</a><div id="toc_using_neural_nets_to_recognize_handwritten_digits" style="display: none;"><p class="toc_section"><ul><a href="chap1.html#perceptrons"><li>Պերսեպտրոններ</li></a><a href="chap1.html#sigmoid_neurons"><li>Սիգմոիդ նեյրոններ</li></a><a href="chap1.html#the_architecture_of_neural_networks"><li>Նեյրոնային ցանցերի կառուցվածքը</li></a><a href="chap1.html#a_simple_network_to_classify_handwritten_digits"><li>Պարզ ցանց ձեռագիր թվանշանների ճանաչման համար</li></a><a href="chap1.html#learning_with_gradient_descent"><li>Սովորում գրադիենտային իջեցման միջոցով</li></a><a href="chap1.html#implementing_our_network_to_classify_digits"><li>Թվերի ճանաչման համար նախատեսված ցանցի իրականացումը</li></a><a href="chap1.html#toward_deep_learning"><li>Խորը ուսուցմանն ընդառաջ</li></a></ul></p></div>
 <script>
-$('#toc_using_neural_nets_to_recognize_handwritten_digits_reveal').click(function() { 
+$('#toc_using_neural_nets_to_recognize_handwritten_digits_reveal').click(function() {
    var src = $('#toc_img_using_neural_nets_to_recognize_handwritten_digits').attr('src');
    if(src == 'images/arrow.png') {
      $("#toc_img_using_neural_nets_to_recognize_handwritten_digits").attr('src', 'images/arrow_down.png');
    } else {
      $("#toc_img_using_neural_nets_to_recognize_handwritten_digits").attr('src', 'images/arrow.png');
    };
-   $('#toc_using_neural_nets_to_recognize_handwritten_digits').toggle('fast', function() {});  
+   $('#toc_using_neural_nets_to_recognize_handwritten_digits').toggle('fast', function() {});
 });</script><p class='toc_mainchapter'><a id="toc_how_the_backpropagation_algorithm_works_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_how_the_backpropagation_algorithm_works" src="images/arrow.png" width="15px"></a><a href="chap2.html">How the backpropagation algorithm works</a><div id="toc_how_the_backpropagation_algorithm_works" style="display: none;"><p class="toc_section"><ul><a href="chap2.html#warm_up_a_fast_matrix-based_approach_to_computing_the_output_from_a_neural_network"><li>Warm up: a fast matrix-based approach to computing the output  from a neural network</li></a><a href="chap2.html#the_two_assumptions_we_need_about_the_cost_function"><li>The two assumptions we need about the cost function</li></a><a href="chap2.html#the_hadamard_product_$s_\odot_t$"><li>The Hadamard product, $s \odot t$</li></a><a href="chap2.html#the_four_fundamental_equations_behind_backpropagation"><li>The four fundamental equations behind backpropagation</li></a><a href="chap2.html#proof_of_the_four_fundamental_equations_(optional)"><li>Proof of the four fundamental equations (optional)</li></a><a href="chap2.html#the_backpropagation_algorithm"><li>The backpropagation algorithm</li></a><a href="chap2.html#the_code_for_backpropagation"><li>The code for backpropagation</li></a><a href="chap2.html#in_what_sense_is_backpropagation_a_fast_algorithm"><li>In what sense is backpropagation a fast algorithm?</li></a><a href="chap2.html#backpropagation_the_big_picture"><li>Backpropagation: the big picture</li></a></ul></p></div>
 <script>
-$('#toc_how_the_backpropagation_algorithm_works_reveal').click(function() { 
+$('#toc_how_the_backpropagation_algorithm_works_reveal').click(function() {
    var src = $('#toc_img_how_the_backpropagation_algorithm_works').attr('src');
    if(src == 'images/arrow.png') {
      $("#toc_img_how_the_backpropagation_algorithm_works").attr('src', 'images/arrow_down.png');
    } else {
      $("#toc_img_how_the_backpropagation_algorithm_works").attr('src', 'images/arrow.png');
    };
-   $('#toc_how_the_backpropagation_algorithm_works').toggle('fast', function() {});  
+   $('#toc_how_the_backpropagation_algorithm_works').toggle('fast', function() {});
 });</script><p class='toc_mainchapter'><a id="toc_improving_the_way_neural_networks_learn_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_improving_the_way_neural_networks_learn" src="images/arrow.png" width="15px"></a><a href="chap3.html">Improving the way neural networks learn</a><div id="toc_improving_the_way_neural_networks_learn" style="display: none;"><p class="toc_section"><ul><a href="chap3.html#the_cross-entropy_cost_function"><li>The cross-entropy cost function</li></a><a href="chap3.html#overfitting_and_regularization"><li>Overfitting and regularization</li></a><a href="chap3.html#weight_initialization"><li>Weight initialization</li></a><a href="chap3.html#handwriting_recognition_revisited_the_code"><li>Handwriting recognition revisited: the code</li></a><a href="chap3.html#how_to_choose_a_neural_network's_hyper-parameters"><li>How to choose a neural network's hyper-parameters?</li></a><a href="chap3.html#other_techniques"><li>Other techniques</li></a></ul></p></div>
 <script>
-$('#toc_improving_the_way_neural_networks_learn_reveal').click(function() { 
+$('#toc_improving_the_way_neural_networks_learn_reveal').click(function() {
    var src = $('#toc_img_improving_the_way_neural_networks_learn').attr('src');
    if(src == 'images/arrow.png') {
      $("#toc_img_improving_the_way_neural_networks_learn").attr('src', 'images/arrow_down.png');
    } else {
      $("#toc_img_improving_the_way_neural_networks_learn").attr('src', 'images/arrow.png');
    };
-   $('#toc_improving_the_way_neural_networks_learn').toggle('fast', function() {});  
+   $('#toc_improving_the_way_neural_networks_learn').toggle('fast', function() {});
 });</script><p class='toc_mainchapter'><a id="toc_a_visual_proof_that_neural_nets_can_compute_any_function_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_a_visual_proof_that_neural_nets_can_compute_any_function" src="images/arrow.png" width="15px"></a><a href="chap4.html">A visual proof that neural nets can compute any function</a><div id="toc_a_visual_proof_that_neural_nets_can_compute_any_function" style="display: none;"><p class="toc_section"><ul><a href="chap4.html#two_caveats"><li>Two caveats</li></a><a href="chap4.html#universality_with_one_input_and_one_output"><li>Universality with one input and one output</li></a><a href="chap4.html#many_input_variables"><li>Many input variables</li></a><a href="chap4.html#extension_beyond_sigmoid_neurons"><li>Extension beyond sigmoid neurons</li></a><a href="chap4.html#fixing_up_the_step_functions"><li>Fixing up the step functions</li></a><a href="chap4.html#conclusion"><li>Conclusion</li></a></ul></p></div>
 <script>
-$('#toc_a_visual_proof_that_neural_nets_can_compute_any_function_reveal').click(function() { 
+$('#toc_a_visual_proof_that_neural_nets_can_compute_any_function_reveal').click(function() {
    var src = $('#toc_img_a_visual_proof_that_neural_nets_can_compute_any_function').attr('src');
    if(src == 'images/arrow.png') {
      $("#toc_img_a_visual_proof_that_neural_nets_can_compute_any_function").attr('src', 'images/arrow_down.png');
    } else {
      $("#toc_img_a_visual_proof_that_neural_nets_can_compute_any_function").attr('src', 'images/arrow.png');
    };
-   $('#toc_a_visual_proof_that_neural_nets_can_compute_any_function').toggle('fast', function() {});  
+   $('#toc_a_visual_proof_that_neural_nets_can_compute_any_function').toggle('fast', function() {});
 });</script><p class='toc_mainchapter'><a id="toc_why_are_deep_neural_networks_hard_to_train_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_why_are_deep_neural_networks_hard_to_train" src="images/arrow.png" width="15px"></a><a href="chap5.html">Why are deep neural networks hard to train?</a><div id="toc_why_are_deep_neural_networks_hard_to_train" style="display: none;"><p class="toc_section"><ul><a href="chap5.html#the_vanishing_gradient_problem"><li>The vanishing gradient problem</li></a><a href="chap5.html#what's_causing_the_vanishing_gradient_problem_unstable_gradients_in_deep_neural_nets"><li>What's causing the vanishing gradient problem?  Unstable gradients in deep neural nets</li></a><a href="chap5.html#unstable_gradients_in_more_complex_networks"><li>Unstable gradients in more complex networks</li></a><a href="chap5.html#other_obstacles_to_deep_learning"><li>Other obstacles to deep learning</li></a></ul></p></div>
 <script>
-$('#toc_why_are_deep_neural_networks_hard_to_train_reveal').click(function() { 
+$('#toc_why_are_deep_neural_networks_hard_to_train_reveal').click(function() {
    var src = $('#toc_img_why_are_deep_neural_networks_hard_to_train').attr('src');
    if(src == 'images/arrow.png') {
      $("#toc_img_why_are_deep_neural_networks_hard_to_train").attr('src', 'images/arrow_down.png');
    } else {
      $("#toc_img_why_are_deep_neural_networks_hard_to_train").attr('src', 'images/arrow.png');
    };
-   $('#toc_why_are_deep_neural_networks_hard_to_train').toggle('fast', function() {});  
+   $('#toc_why_are_deep_neural_networks_hard_to_train').toggle('fast', function() {});
 });</script><p class='toc_mainchapter'><a id="toc_deep_learning_reveal" class="toc_reveal" onMouseOver="this.style.borderBottom='1px solid #2A6EA6';" onMouseOut="this.style.borderBottom='0px';"><img id="toc_img_deep_learning" src="images/arrow.png" width="15px"></a><a href="chap6.html">Deep learning</a><div id="toc_deep_learning" style="display: none;"><p class="toc_section"><ul><a href="chap6.html#introducing_convolutional_networks"><li>Introducing convolutional networks</li></a><a href="chap6.html#convolutional_neural_networks_in_practice"><li>Convolutional neural networks in practice</li></a><a href="chap6.html#the_code_for_our_convolutional_networks"><li>The code for our convolutional networks</li></a><a href="chap6.html#recent_progress_in_image_recognition"><li>Recent progress in image recognition</li></a><a href="chap6.html#other_approaches_to_deep_neural_nets"><li>Other approaches to deep neural nets</li></a><a href="chap6.html#on_the_future_of_neural_networks"><li>On the future of neural networks</li></a></ul></p></div>
 <script>
-$('#toc_deep_learning_reveal').click(function() { 
+$('#toc_deep_learning_reveal').click(function() {
    var src = $('#toc_img_deep_learning').attr('src');
    if(src == 'images/arrow.png') {
      $("#toc_img_deep_learning").attr('src', 'images/arrow_down.png');
    } else {
      $("#toc_img_deep_learning").attr('src', 'images/arrow.png');
    };
-   $('#toc_deep_learning').toggle('fast', function() {});  
+   $('#toc_deep_learning').toggle('fast', function() {});
 });</script><p class="toc_not_mainchapter"><a href="sai.html">Appendix: Is there a <em>simple</em> algorithm for intelligence?</a></p><p class="toc_not_mainchapter"><a href="acknowledgements.html">Acknowledgements</a></p><p class="toc_not_mainchapter"><a href="faq.html">Frequently Asked Questions</a></p>
 <!--
 <hr>
@@ -131,7 +131,7 @@ donation.  I suggest $3, but you can choose the amount.</p>
 -->
 
 <hr>
-<span class="sidebar_title">Sponsors</span>
+<span class="sidebar_title">Հովանավորներ</span>
 <br/>
 <a href='http://www.ersatz1.com/'><img src='assets/ersatz.png' width='140px' style="padding: 0px 0px 10px 8px; border-style: none;"></a>
 
@@ -142,30 +142,28 @@ style="padding: 0px 0px 10px 8px; border-style: none;"></a>
 
 <a href='http://www.visionsmarts.com'><img
 src='assets/visionsmarts.png' width='160px' style="padding: 0px 0px
-0px 0px; border-style: none;"></a> <br/> 
+0px 0px; border-style: none;"></a> <br/>
 
-<p class="sidebar">Thanks to all the <a
-href="supporters.html">supporters</a> who made the book possible, with
-especial thanks to Pavel Dudrenov.  Thanks also to all the
-contributors to the <a href="bugfinder.html">Bugfinder Hall of
-Fame</a>.  </p>
+<p class="sidebar">Շնորհակալություն եմ հայտնում բոլոր <a
+href="supporters.html">աջակցողներին</a>, ովքեր օգնել են գիրքն իրականություն դարձնել:
+Հատուկ շնորհակալություններ Պավել Դուդրենովին. Շնորհակալություն եմ հայտնում նաև նրանց,
+ովքեր ներդրում են ունեցել <a href="bugfinder.html">Սխալների որոնման հուշատախտակում</a>.  </p>
 
 <hr>
-<span class="sidebar_title">Resources</span>
+<span class="sidebar_title">Ռեսուրսներ</span>
 
-<p class="sidebar"><a href="https://twitter.com/michael_nielsen">Michael Nielsen on Twitter</a></p>
+<p class="sidebar"><a href="https://twitter.com/michael_nielsen">Մայքլ Նիլսենը թվիթերում</a></p>
 
-<p class="sidebar"><a href="faq.html">Book FAQ</a></p>
-
-<p class="sidebar">
-<a href="https://github.com/mnielsen/neural-networks-and-deep-learning">Code repository</a></p>
+<p class="sidebar"><a href="faq.html">Գրքի մասին հաճախակի տրբող հարցեր</a></p>
 
 <p class="sidebar">
-<a href="http://eepurl.com/0Xxjb">Michael Nielsen's project announcement mailing list</a>
+<a href="https://github.com/mnielsen/neural-networks-and-deep-learning">Կոդի պահոցը</a></p>
+
+<p class="sidebar">
+<a href="http://eepurl.com/0Xxjb">Մայքլ Նիլսենի նախագծերի հայտարարման էլ հասցեների ցուցակը</a>
 </p>
 
-<p class="sidebar"> <a href="http://www.deeplearningbook.org/">Deep Learning</a>, book by Ian
-Goodfellow, Yoshua Bengio, and Aaron Courville</p>
+<p class="sidebar"> <a href="http://www.deeplearningbook.org/">Խորը Ուսուցում</a>, գրքի հեղինակներ` Յան Գուդֆելլո, Յոշուա Բենջիո և Ահարոն Կուրվիլ</p>
 
 <p class="sidebar"><a href="http://cognitivemedium.com">cognitivemedium.com</a></p>
 
@@ -173,29 +171,29 @@ Goodfellow, Yoshua Bengio, and Aaron Courville</p>
 <a href="http://michaelnielsen.org"><img src="assets/Michael_Nielsen_Web_Small.jpg" width="160px" style="border-style: none;"/></a>
 
 <p class="sidebar">
-By <a href="http://michaelnielsen.org">Michael Nielsen</a> / Jan 2017
+<a href="http://michaelnielsen.org">Մայքլ Նիլսենի</a> կողմից. Հունվար 2017
 </p>
 </div>
+
 <p>
-<em>Neural Networks and Deep Learning</em> is a free online book.  The
-book will teach you about:
-<ul>
-<li>Neural networks, a beautiful biologically-inspired programming
-paradigm which enables a computer to learn from observational data
+  <em>Նեյրոնային ցանցեր և խորը ուսուցումը</em> ազատ առցանց գիրք է:
+    Գիրքը կսովորեցնի նրա մասին, թե ինչպես են աշխատում.
+  <ul>
+    <li>
+      Նեյրոնային ցանցերը, որպես ծրագրավորման մեթոդ` ոգեշնչված կենսաբանությունից:
+      Այն թույլ է տալիս համակարգիչներին "սովորել" դիտարկվող տվյալներից բազմությունից:
+    <li>
+      Խորը ուսուցում, որը նեյրոնային ցանցերին սովորացնելու զորեղ հմտությունների բազմւթյուն է
 
-<li>Deep learning, a powerful set of techniques for learning in neural
-networks
-
-</ul>
-Neural networks and deep learning currently provide the best solutions
-to many problems in image recognition, speech recognition, and natural
-language processing.  This book will teach you many of the core
-concepts behind neural networks and deep learning.  
+  </ul>
+  Նեյրոնային ցանծերը և խորը ուսուցումը ներկայումս ապահովում են ամենաէֆֆեկտիվ լուծումներն այնպիսի խնդիրներին,
+  ինչպիսիք են նկարներին ճանաչումը, խոսքի ճանաչումը և բնական լեզվի մշակումը:
+  Այս գիրքը կսովորեցնի նեյրոնային ցանցերի և խորը ուսուցման հիմքային բազմաթիվ հիմնական գաղափարներ:
 </p>
 
-<p>For more details about the approach taken in the
-book, <a href="about.html">see here</a>.  Or you can jump directly
-to <a href="chap1.html">Chapter 1</a> and get started.
+<p>Գրքում ոգտագործված մոտեցումների մասին ավելի մանրամասն կարծիք կազմելու համար, <a href="about.html">տես այստեղ</a>.
+  Կամ կարող եք միանգամից անցնել
+<a href="chap1.html">Գլուխ 1</a> և սկսել գրքի ուսումնասիրությունը.
 <p>
 
 </p>
