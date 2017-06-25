@@ -1,0 +1,27 @@
+# Որոշ Տերմինների Թարգմանություններ (Translations of Several Terms)
+
+- standard deviation - Միջին քառակուսային շեղում
+- cross-entropy - միջէնտրոպիա (կամ ներէնտրոպիա կամ փոխադարձ էնտրոպիա?)
+- overfit - գերմարզում
+- regularization - ռեգուլյարացում
+- hyper-parameter - հիպեր պարամետր
+- Predictor - Կանխատեսիչ
+- Label - Պիտակ
+- Feature - հատկանիշ
+- Loss - Կորուստ
+- gradient descent - գրադիենտային վայրէջք
+- train - մարզել
+- backpropagation - հետադարձ տարածում (կամ ինֆորմալ` հետ տարածում)
+- cost function - գնային ֆունկցիա (կամ գնի ֆունկցիա) ?
+- weight - կշիռ
+- bias - սխալանք (կամ շեղում)
+- threshold - շեմ
+- vectorization - վեկտորացում
+- initialization - սկզբնարժեքավորում
+- feedforward - առաջաբեր
+- epoch - դարաշրջան
+- mini-batch - մինի-փաթեթ
+- sampling - նմուշագրում
+- learning rate - ուսուցման գործակից
+- run program - մեկնարկել/գործարկել
+- tuple - շարք
