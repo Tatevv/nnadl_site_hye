@@ -25,3 +25,6 @@
 - learning rate - ուսուցման գործակից
 - run program - մեկնարկել/գործարկել
 - tuple - շարք
+- image - պատկեր
+- step function - քայլի ֆունկցիա
+- universality - ունիվերսալություն
