@@ -26,5 +26,5 @@
 - run program - մեկնարկել/գործարկել
 - tuple - շարք
 - image - պատկեր
-- step function - քայլի ֆունկցիա
+- step function - քայլի ֆունկցիա (քայլի ֆունկցիա)
 - universality - ունիվերսալություն
