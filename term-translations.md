@@ -5,10 +5,10 @@
 - overfit - գերմարզում
 - regularization - ռեգուլյարացում
 - hyper-parameter - հիպեր պարամետր
-- Predictor - Կանխատեսիչ
-- Label - Պիտակ
-- Feature - հատկանիշ
-- Loss - Կորուստ
+- predictor - կանխատեսիչ
+- label - պիտակ
+- feature - հատկանիշ
+- loss - կորուստ
 - gradient descent - գրադիենտային վայրէջք
 - train - մարզել
 - backpropagation - հետադարձ տարածում (կամ ինֆորմալ` հետ տարածում)
